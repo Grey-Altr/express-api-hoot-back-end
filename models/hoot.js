@@ -30,7 +30,7 @@ const hootSchema = new mongoose.Schema(
         category: {
             type: String,
             required: true,
-            enum: ['News', 'Sports', 'Sports', 'Movies', 'Music', 'Television']
+            enum: ['News', 'Sports', 'Games', 'Movies', 'Music', 'Television']
         },
         author: {
             type: mongoose.Schema.Types.ObjectId,
