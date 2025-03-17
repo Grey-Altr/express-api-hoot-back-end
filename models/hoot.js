@@ -10,12 +10,9 @@ const commentSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
         },
-        comments: [commentSchema],
     },
-    {
-        timestamps: true,
-    }
-)
+    { timestamps: true }
+);
 
 const hootSchema = new mongoose.Schema(
     {
@@ -36,8 +33,9 @@ const hootSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
         },
-},
-{ timestamps: true }
+        comments: [commentSchema],
+    },
+    { timestamps: true }
 );
 
 const Hoot = mongoose.model('Hoot', hootSchema);
